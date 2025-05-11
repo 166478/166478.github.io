@@ -3,24 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zhuo Lee – Marketing Portfolio</title>
+  <title>Zhuo Lee – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #114c3d;
-      --bg2: #0c1c17;
-      --text: #d5f5e3;
-      --accent: #a4f3c1;
+      --bg: linear-gradient(to bottom right, #246344, #121b18);
+      --text: #e2fff2;
+      --accent: #a5ffdc;
+      --card-bg: #ffffff;
+      --card-text: #111;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, var(--bg), var(--bg2));
+      background: var(--bg);
       color: var(--text);
       text-align: center;
-      line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    nav {
+      background: rgba(18, 27, 24, 0.8);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     h1, h2 {
@@ -54,54 +76,84 @@
     }
 
     .card {
-      background-color: #fff;
-      color: #111;
+      background-color: var(--card-bg);
+      color: var(--card-text);
       border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
       text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
     }
 
     .footer {
       padding: 2rem;
       font-size: 0.9rem;
-      color: #8bd9c6;
+      color: var(--accent);
     }
 
     a {
-      color: #8bd9c6;
+      color: var(--accent);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    img.profile {
+      width: 140px;
+      border-radius: 100px;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <div class="section">
-    <div style="text-align: center;">
-      <img src="zhuo-profile.jpg" alt="Zhuo Lee smiling near a tree" style="width:160px; border-radius: 100px; margin-top: 2rem;" />
-    </div>
+    <img src="zhuo-profile.jpg" alt="Zhuo Lee" class="profile" />
     <h1>Hi. I'm Zhuo.<br />A Marketing Strategist.</h1>
-    <p>I'm a first-generation student pursuing Business Administration with a concentration in Marketing at UC Irvine. I have a strong interest in the creative aspects of marketing and am passionate about blending creativity, business thinking, and user insights to shape campaigns that stand out and connect with real people.</p>
+    <p>I'm a first-generation student pursuing Business Administration with a concentration in Marketing at UC Irvine. I love exploring how strategy and storytelling shape impactful brands.</p>
   </div>
 
   <div class="section">
     <h2>Work Experience</h2>
-    <p>Here are a few roles where I’ve applied marketing strategy, brand thinking, and hands-on execution.</p>
+    <p>Where I've practiced creative strategy, content, and team-driven execution.</p>
     <div class="grid">
       <div class="card">
-        <h3>🌱 Marketing Intern – UCI Sustainability Resource Center</h3>
-        <p>Planned social campaigns and created digital content promoting campus-wide environmental programs and student initiatives.</p>
+        <h3>🌱 UCI Sustainability Resource Center</h3>
+        <p>Marketing Intern | Social campaigns and program visuals for environmental awareness on campus.</p>
       </div>
       <div class="card">
-        <h3>📊 Growth Intern – Pulse Academy</h3>
-        <p>Developed marketing materials and helped build partnerships with student organizations to grow user engagement.</p>
+        <h3>📊 Pulse Academy</h3>
+        <p>Growth Intern | Built student engagement pipelines and supported user outreach planning.</p>
       </div>
       <div class="card">
-        <h3>🧠 Design Strategy Intern – UCI’s Antrepreneur Center</h3>
-        <p>Worked with the startup community to provide branding feedback, pitch deck visuals, and marketing strategies.</p>
+        <h3>🧠 UCI Antrepreneur Center</h3>
+        <p>Design Strategy Intern | Delivered branding advice and presentation visuals for startup teams.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>In Progress</h2>
+    <p>Side projects and design experiments built with curiosity and collaboration.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>✏️ Rebrand Workshop</h3>
+        <p>Hosting branding workshops for orgs looking to refresh their look and story.</p>
+      </div>
+      <div class="card">
+        <h3>📋 Survey UX Study</h3>
+        <p>Survey + interview research focused on student navigation of campus services.</p>
       </div>
     </div>
   </div>
@@ -113,7 +165,7 @@
   </div>
 
   <div class="footer">
-    &copy; 2025 Zhuo Lee · All rights reserved
+    &copy; 2025 Zhuo Lee · Built for exploration
   </div>
 </body>
 </html>
