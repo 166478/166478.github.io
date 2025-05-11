@@ -5,29 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zhuo Lee – Marketing Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #114c3d;
+      --bg2: #0c1c17;
+      --text: #d5f5e3;
+      --accent: #a4f3c1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, var(--bg), var(--bg2));
+      color: var(--text);
+      text-align: center;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-size: 3rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #111;
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+
+    .footer {
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8bd9c6;
+    }
+
+    a {
+      color: #8bd9c6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="section">
+    <div style="text-align: center;">
+      <img src="zhuo-profile.jpg" alt="Zhuo Lee smiling near a tree" style="width:160px; border-radius: 100px; margin-top: 2rem;" />
+    </div>
     <h1>Hi. I'm Zhuo.<br />A Marketing Strategist.</h1>
     <p>I'm a first-generation student pursuing Business Administration with a concentration in Marketing at UC Irvine. I have a strong interest in the creative aspects of marketing and am passionate about blending creativity, business thinking, and user insights to shape campaigns that stand out and connect with real people.</p>
   </div>
 
   <div class="section">
-    <h2>Work in Progress</h2>
-    <p>Currently exploring content creation, visual strategy, and data-driven messaging. Projects span academic campaigns to independent design sprints.</p>
+    <h2>Work Experience</h2>
+    <p>Here are a few roles where I’ve applied marketing strategy, brand thinking, and hands-on execution.</p>
     <div class="grid">
       <div class="card">
-        <h3>🔍 Consumer Journey Study</h3>
-        <p>Survey and analysis for identifying pain points and emotional drivers behind buying decisions.</p>
+        <h3>🌱 Marketing Intern – UCI Sustainability Resource Center</h3>
+        <p>Planned social campaigns and created digital content promoting campus-wide environmental programs and student initiatives.</p>
       </div>
       <div class="card">
-        <h3>📱 Social Media Strategy</h3>
-        <p>Brand voice, calendar planning, and campaign pilots for a nonprofit startup's rebrand launch.</p>
+        <h3>📊 Growth Intern – Pulse Academy</h3>
+        <p>Developed marketing materials and helped build partnerships with student organizations to grow user engagement.</p>
       </div>
       <div class="card">
-        <h3>🎯 Small Biz Brand Refresh</h3>
-        <p>Created identity, tone, and positioning for a local shop using customer interviews and design sprints.</p>
+        <h3>🧠 Design Strategy Intern – UCI’s Antrepreneur Center</h3>
+        <p>Worked with the startup community to provide branding feedback, pitch deck visuals, and marketing strategies.</p>
       </div>
     </div>
   </div>
