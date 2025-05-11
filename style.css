@@ -1,0 +1,70 @@
+:root {
+  --bg: #114c3d;
+  --bg2: #0c1c17;
+  --text: #d5f5e3;
+  --accent: #a4f3c1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, var(--bg), var(--bg2));
+  color: var(--text);
+  text-align: center;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-size: 3rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: #fff;
+  color: #111;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #8bd9c6;
+}
+
+a {
+  color: #8bd9c6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
