@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zhuo Lee – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: linear-gradient(to bottom right, #246344, #121b18);
+      --text: #e2fff2;
+      --accent: #a5ffdc;
+      --card-bg: #ffffff;
+      --card-text: #111;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: rgba(18, 27, 24, 0.8);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      font-size: 3rem;
+      margin: 1.5rem 0 0.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color: var(--card-text);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .footer {
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8bd9c6;
+    }
+
+    a {
+      color: #8bd9c6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img.profile {
+      width: 140px;
+      border-radius: 100px;
+      margin-top: 2rem;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .show {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="section">
+    <img src="zhuo-profile.jpg" alt="Zhuo Lee" class="profile">
+    <h1>Hi. I'm Zhuo.<br />A Marketing Strategist.</h1>
+    <p>I'm a first-generation student pursuing Business Administration with a concentration in Marketing at UC Irvine. I love exploring how strategy and storytelling shape impactful brands.</p>
+  </div>
+
+  <div class="section">
+    <h2>Work Experience</h2>
+    <p>Where I've practiced creative strategy, content, and team-driven execution.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>🌱 UCI Sustainability Resource Center</h3>
+        <p>Marketing Intern | Social campaigns and program visuals for environmental awareness on campus.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Pulse Academy</h3>
+        <p>Growth Intern | Built student engagement pipelines and supported user outreach planning.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 UCI Antrepreneur Center</h3>
+        <p>Design Strategy Intern | Delivered branding advice and presentation visuals for startup teams.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>In Progress</h2>
+    <p>Side projects and design experiments built with curiosity and collaboration.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>✏️ Rebrand Workshop</h3>
+        <p>Hosting branding workshops for orgs looking to refresh their look and story.</p>
+      </div>
+      <div class="card">
+        <h3>📋 Survey UX Study</h3>
+        <p>Survey + interview research focused on student navigation of campus services.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Get In Touch</h2>
+    <p>Email: <a href="mailto:zhuo@email.com">zhuo@email.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/zhuo-lee" target="_blank">linkedin.com/in/zhuo-lee</a></p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Zhuo Lee · Built for exploration
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section h1, .section h2, .section p, .card, img.profile')
+      .forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
